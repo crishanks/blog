@@ -5,6 +5,7 @@ export const Posts: IPost[] = [
   {
     title: "Test",
     date: "Test Date",
-    content: "Test Content"
+    content: "Test Content",
+    summary: "Summary",
   }
 ];

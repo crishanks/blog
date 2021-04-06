@@ -1,16 +1,15 @@
 import React from 'react';
+import { IPost } from '../../Models/Posts';
+import { Posts } from '../../Posts';
 import { homeStyles } from './Home.ias';
 
 export default function Home() {
-  const {wrapper} = homeStyles;
+  const styles = homeStyles();
 
-  const posts = [
-
-  ];
 
  return (
-   <div className={wrapper}>
-     {posts}
+   <div className={styles.wrapper}>
+     {Posts.map((post: IPost, i: number) => <div key={i}>{post.title}</div>)}
    </div>
  );
 }

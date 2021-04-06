@@ -1,7 +1,8 @@
 import React from 'react';
 import {IPostCardProps} from './PostCard.ias';
 import Card from '@material-ui/core/Card';
-import { CardActions, CardContent, CardMedia, Chip, Typography } from '@material-ui/core';
+import { CardActions, CardContent, CardMedia, Chip, IconButton, Typography } from '@material-ui/core';
+import ShareIcon from '@material-ui/icons/Share';
 
 export default function PostCard(props: IPostCardProps) {
   return (

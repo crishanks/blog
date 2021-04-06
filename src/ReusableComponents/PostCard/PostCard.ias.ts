@@ -7,7 +7,7 @@ export interface IPostCardProps {
   avatarChildren?: string;
   imageUrl?: string;
   imageTitle?: string;
-  labels?: IPostCardLabel;
+  labels?: IPostCardLabel[];
 }
 
 export interface IPostCardLabel {

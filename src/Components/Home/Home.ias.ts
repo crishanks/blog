@@ -1,11 +1,13 @@
+import { css } from '@emotion/css';
 import React from 'react';
-import { css } from '@emotion/react';
 
-export const homeStyles = () => (
-  {
-    wrapper: css`
-      label: wrapper,
-      display: flex;
-    `,
+export const homeStyles = () => {
+  const wrapper = css`
+    label: wrapper;
+    display: flex;
+  `;
+
+  return {
+    wrapper,
   }
-);
+};

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PostCardStyles, {IPostCardProps} from './PostCard.ias';
 import Card from '@material-ui/core/Card';
 import { CardActions, CardContent, CardMedia, Chip, IconButton, Typography } from '@material-ui/core';
@@ -7,16 +7,25 @@ import postCardStyles from './PostCard.ias';
 
 export default function PostCard(props: IPostCardProps) {
   const styles = postCardStyles();
+
+  const [cardHovered, setCardHovered] = useState(false);
   return (
     <Card
       arial-label={"blog-post-card"}
       className={styles.cardWrapper}
+      classes={{
+        root: cardHovered ? styles.hovered : "",
+      }}
+      onMouseEnter={() => setCardHovered(true)}
+      onMouseLeave={() => setCardHovered(false)}
     >
-      <CardMedia 
-        image={props.imageUrl}
-        title={props.imageTitle}
-      />
-      <CardContent>
+      {props.imageUrl && (
+        <CardMedia 
+          image={props.imageUrl}
+          title={props.imageTitle}
+        />
+      )}
+      <CardContent className={styles.cardContent}>
         {props.labels && (
           <div>
             {props.labels.map((label) => {
@@ -26,13 +35,13 @@ export default function PostCard(props: IPostCardProps) {
             })}
           </div>
         )}
-        <Typography gutterBottom variant={"h5"} color={"textPrimary"} component={"h2"}>
+        <Typography gutterBottom variant={"h5"} component={"h2"}>
             {props.title}
         </Typography>
         <Typography gutterBottom variant={"caption"} color={"textSecondary"} component={"p"}>
             {props.date}
         </Typography>
-        <Typography variant={"body2"} color={"textPrimary"} component={"p"}>
+        <Typography variant={"body2"} component={"p"}>
           {props.summary}
         </Typography>
       </CardContent>

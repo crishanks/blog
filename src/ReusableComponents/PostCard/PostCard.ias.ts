@@ -18,10 +18,24 @@ export interface IPostCardLabel {
 export default function postCardStyles() {
   const cardWrapper = css`
     label: card-wrapper;
-    max-width: 375px;
+    max-width: 400px;
+    min-width: 275px;
+    background-color: #e2e2e2 !important;
+  `;
+
+  const hovered = css`
+    label: hovered;
+    transform: scale(1.05);
+  `;
+
+  const cardContent = css`
+    label: card-font;
+    color: #000505;
   `;
 
   return {
     cardWrapper,
+    hovered,
+    cardContent,
   }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { IPost } from '../../Models/Posts';
-import { Posts } from '../../Posts';
+import { Posts } from '../../Data/Posts';
 import PostCard from '../../ReusableComponents/PostCard';
 import { homeStyles } from './Home.ias';
 

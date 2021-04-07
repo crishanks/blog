@@ -1,4 +1,4 @@
-import { IPost } from "../Models/Posts";
+import { IPost } from "../../Models/Posts";
 
 export const Posts: IPost[] = [
   //insert post content objects here.

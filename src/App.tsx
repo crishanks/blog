@@ -6,13 +6,15 @@ import {
   Route,
 } from "react-router-dom";
 import Home from './Components/Home';
+import Post from './Components/Post';
 
 
 function App() {
   return (
     <Router>
       <Switch>
-        <Route path={'/'} component={Home} />
+        <Route exact path={'/'} component={Home} />
+        <Route path={'/:id'} component={Post}/>
       </Switch>
     </Router>
   );

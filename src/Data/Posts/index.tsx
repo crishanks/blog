@@ -9,19 +9,19 @@ export const Posts: IPost[] = [
     summary: "Summary",
   },
   {
-    title: "Test",
+    title: "Test1",
     date: "Test Date",
     content: "Test Content",
     summary: "Summary",
   },
   {
-    title: "Test",
+    title: "Test2",
     date: "Test Date",
     content: "Test Content",
     summary: "Summary",
   },
   {
-    title: "Test",
+    title: "Test3",
     date: "Test Date",
     content: "Test Content",
     summary: "Summary",

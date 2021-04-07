@@ -6,7 +6,7 @@ import {
   Route,
 } from "react-router-dom";
 import Home from './Components/Home';
-import Post from './Components/Post';
+import ViewPost from './Components/ViewPost';
 
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
     <Router>
       <Switch>
         <Route exact path={'/'} component={Home} />
-        <Route path={'/:id'} component={Post}/>
+        <Route path={'/:id'} component={ViewPost}/>
       </Switch>
     </Router>
   );

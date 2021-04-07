@@ -3,12 +3,12 @@ import postCardStyles, {IPostCardProps} from './PostCard.ias';
 import Card from '@material-ui/core/Card';
 import { CardActions, CardContent, CardMedia, Chip, IconButton, Typography } from '@material-ui/core';
 import ShareIcon from '@material-ui/icons/Share';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 export default function PostCard(props: IPostCardProps) {
   const styles = postCardStyles();
   const history = useHistory();
-  const navigate = () => (history.push(props.title));
+  const navigateToPost = () => (history.push(props.title));
 
   const [cardHovered, setCardHovered] = useState(false);
 
@@ -21,7 +21,7 @@ export default function PostCard(props: IPostCardProps) {
       }}
       onMouseEnter={() => setCardHovered(true)}
       onMouseLeave={() => setCardHovered(false)}
-      onClick={navigate}
+      onClick={navigateToPost}
     >
       {props.imageUrl && (
         <CardMedia 

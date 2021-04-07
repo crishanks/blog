@@ -1,13 +1,16 @@
 import React from 'react';
-import {IPostCardProps} from './PostCard.ias';
+import PostCardStyles, {IPostCardProps} from './PostCard.ias';
 import Card from '@material-ui/core/Card';
 import { CardActions, CardContent, CardMedia, Chip, IconButton, Typography } from '@material-ui/core';
 import ShareIcon from '@material-ui/icons/Share';
+import postCardStyles from './PostCard.ias';
 
 export default function PostCard(props: IPostCardProps) {
+  const styles = postCardStyles();
   return (
     <Card
       arial-label={"blog-post-card"}
+      className={styles.cardWrapper}
     >
       <CardMedia 
         image={props.imageUrl}
@@ -23,10 +26,13 @@ export default function PostCard(props: IPostCardProps) {
             })}
           </div>
         )}
-      <Typography gutterBottom variant={"h5"} color={"textPrimary"} component={"h2"}>
-          {props.title}
+        <Typography gutterBottom variant={"h5"} color={"textPrimary"} component={"h2"}>
+            {props.title}
         </Typography>
-        <Typography variant={"body2"} color={"textSecondary"} component={"p"}>
+        <Typography gutterBottom variant={"caption"} color={"textSecondary"} component={"p"}>
+            {props.date}
+        </Typography>
+        <Typography variant={"body2"} color={"textPrimary"} component={"p"}>
           {props.summary}
         </Typography>
       </CardContent>

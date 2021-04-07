@@ -1,10 +1,13 @@
-import { css } from '@emotion/css';
 import React from 'react';
+import { css } from '@emotion/css';
 
 export const homeStyles = () => {
   const wrapper = css`
     label: wrapper;
-    display: flex;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin: 24px;
   `;
 
   return {

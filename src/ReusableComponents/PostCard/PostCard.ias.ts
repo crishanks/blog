@@ -1,3 +1,4 @@
+import { css } from "@emotion/css";
 import React from "react";
 
 export interface IPostCardProps {
@@ -12,4 +13,15 @@ export interface IPostCardProps {
 
 export interface IPostCardLabel {
   text: string;
+}
+
+export default function postCardStyles() {
+  const cardWrapper = css`
+    label: card-wrapper;
+    max-width: 375px;
+  `;
+
+  return {
+    cardWrapper,
+  }
 }
